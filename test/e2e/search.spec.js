@@ -9,9 +9,9 @@ describe('Search View', function() {
   });
 
   it('should search for a term', function () {
-    term.sendKeys('london');
+    term.sendKeys('london, uk');
     button.click();
-    expect(results.count()).toEqual(4);
+    expect(results.count()).toEqual(1);
   });
 
   it('should take us to the London, UK weather view', function () {

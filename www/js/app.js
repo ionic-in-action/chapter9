@@ -1,7 +1,7 @@
 angular.module('App', ['ionic'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
-  
+
   $stateProvider
     .state('search', {
       url: '/search',
@@ -60,16 +60,16 @@ angular.module('App', ['ionic'])
 
 .filter('icons', function () {
   var map = {
-    'clear-day': 'ion-ios7-sunny',
-    'clear-night': 'ion-ios7-moon',
-    rain: 'ion-ios7-rainy',
-    snow: 'ion-ios7-snowy',
-    sleet: 'ion-ios7-rainy',
-    wind: 'ion-ios7-flag',
-    fog: 'ion-ios7-cloud',
-    cloudy: 'ion-ios7-cloudy',
-    'partly-cloudy-day': 'ion-ios7-partlysunny',
-    'partly-cloudy-night': 'ion-ios7-cloudy-night'
+    'clear-day': 'ion-ios-sunny',
+    'clear-night': 'ion-ios-moon',
+    rain: 'ion-ios-rainy',
+    snow: 'ion-ios-snowy',
+    sleet: 'ion-ios-rainy',
+    wind: 'ion-ios-flag',
+    fog: 'ion-ios-cloud',
+    cloudy: 'ion-ios-cloudy',
+    'partly-cloudy-day': 'ion-ios-partlysunny',
+    'partly-cloudy-night': 'ion-ios-cloudy-night'
   };
   return function (icon) {
     return map[icon] || '';
@@ -90,11 +90,7 @@ angular.module('App', ['ionic'])
   }
 
   var Locations = {
-    data: [{
-      city: 'Chicago, IL, USA',
-      lat: 41.8781136,
-      lng: -87.6297982
-    }],
+    data: [],
     getIndex: function (item) {
       var index = -1;
       angular.forEach(Locations.data, function (location, i) {

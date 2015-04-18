@@ -8,5 +8,6 @@ describe('Chance Filter', function() {
     expect(chanceFilter(0.44)).toEqual(40);
     expect(chanceFilter(0.46)).toEqual(50);
     expect(chanceFilter(0.95)).toEqual(100);
+    expect(chanceFilter(undefined)).toEqual(0);
   }));
 });
